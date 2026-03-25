@@ -476,7 +476,7 @@ body {
 @media (max-width: 640px) {
   .corner-icon {
     left: 8px;
-    bottom: 50px;
+    bottom: 25px;
     width: 36px;
     height: 36px;
   }
