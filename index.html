@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ilee Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Gruppo&family=Oxanium:wght@200..800&family=Poiret+One&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <video class="video-background" autoplay muted loop playsinline>
+      <source src="assets/background.mp4" type="video/mp4" />
+    </video>
+    <div class="video-overlay"></div>
+    <div class="grain"></div>
+
+    <main class="page">
+      <button class="top-left" id="contactTrigger">Contact Me</button>
+
+      <button
+        class="right-control"
+        id="musicToggle"
+        aria-label="Play or pause music"
+      >
+        <svg
+          id="musicIcon"
+          width="22"
+          height="22"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <polygon points="6 3 20 12 6 21 6 3"></polygon>
+        </svg>
+      </button>
+
+      <section class="cards-layer" id="cardsLayer"></section>
+
+      <section class="hero">
+        <h1 class="hero-title">iLee</h1>
+        <div class="infinite-text">
+          <p class="main-text amatic-sc-bold">
+            this page is under construction !<span class="cursor"></span>
+          </p>
+        </div>
+      </section>
+
+      <div class="story-orbit-wrap">
+        <div class="story-orbit delayed-show">
+          <div class="orbit-ring"></div>
+          <div class="orbit-text">
+            He used to punish his body at the gym. Extra reps for every mistake,
+            longer runs for every bad day, thinking discipline meant pain. But
+            nothing really changed except the quiet resentment he felt toward
+            himself. The body doesn’t respond to punishment, it responds to
+            partnership.
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div class="overlay" id="overlay"></div>
+
+    <div class="card-modal" id="cardModal">
+      <div class="card-modal-content">
+        <img id="modalImage" src="" alt="Expanded artwork" />
+      </div>
+    </div>
+
+    <div class="contact-modal" id="contactModal">
+      <div class="contact-content">
+        <div class="contact-label">Get in touch</div>
+        <a class="contact-item" href="mailto:ilia.amini.main@gmail.com"
+          >ilia.amini.main@gmail.com</a
+        >
+        <a class="contact-item" href="tel:+14376600039">+1 (437) 660-0039</a>
+      </div>
+    </div>
+
+    <audio id="bgMusic" class="hidden-audio" autoplay loop preload="auto">
+      <source src="assets/music.mp3" type="audio/mpeg" />
+    </audio>
+
+    <script src="https://cdn.lordicon.com/lordicon.js"></script>
+    
+    <div class="corner-icon">
+      <a
+      href="https://lordicon.com/"
+      class="hidden-credit"
+      aria-hidden="true"
+      tabindex="-1"
+      >Icons by Lordicon.com</a
+      >
+      <lord-icon
+        id="iconTrigger"
+        src="https://cdn.lordicon.com/srupsmbe.json"
+        trigger="hover"
+        stroke="light"
+        colors="primary:#e4e4e4,secondary:#109121"
+        style="width: 80px; height: 80px"
+      >
+      </lord-icon>
+      <div class="icon-label" id="iconLabel">
+        made by
+        <a href="https://parsamh.com" target="_blank" class="author-link"
+          >Parsa</a
+        >
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
