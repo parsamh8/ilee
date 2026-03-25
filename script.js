@@ -200,9 +200,27 @@ function buildCircularText() {
 populateCards();
 buildCircularText();
 
-const iconTrigger = document.getElementById("iconTrigger");
-const iconLabel = document.getElementById("iconLabel");
+document.addEventListener("DOMContentLoaded", () => {
+  const iconTrigger = document.getElementById("iconTrigger");
+  const iconLabel = document.getElementById("iconLabel");
 
-iconTrigger.addEventListener("mouseenter", () => {
-  iconLabel.classList.add("show");
+  if (!iconTrigger || !iconLabel) return;
+
+  // Desktop (hover)
+  iconTrigger.addEventListener("mouseenter", () => {
+    iconLabel.classList.add("show");
+  });
+
+  // Mobile (touch)
+  iconTrigger.addEventListener("touchstart", (e) => {
+    e.stopPropagation();
+    iconLabel.classList.add("show");
+  });
+
+  // Optional: close when tapping outside
+  document.addEventListener("touchstart", (e) => {
+    if (!iconTrigger.contains(e.target) && !iconLabel.contains(e.target)) {
+      iconLabel.classList.remove("show");
+    }
+  });
 });
